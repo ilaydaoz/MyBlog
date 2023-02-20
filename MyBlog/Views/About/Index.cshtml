@@ -1,0 +1,99 @@
+﻿@using EntityLayer.Concrete
+@model List<About>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- About ındex -->
+
+</head>
+
+<style>
+    body {
+        background-color: whitesmoke;
+    }
+</style>
+
+<body>
+
+
+
+    <section class="main-content-w3layouts-agileits">
+        <div class="container">
+            <h3 class="tittle"> SMTcoder kim ? </h3>
+            <div class="row inner-sec">
+
+                <!--left-->
+                <div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
+                    <div class="blog-grid-top">
+
+                        <div class="blog_info_left_grid">
+                            <a href="single.html">
+                                <img src="~/web/images/sa2.jpeg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <br />
+                        <br />
+                        @foreach (var item in Model)
+                        {
+                            
+                    @*<h4>
+                        Selam, ben samet akca nam-ı diğer smtcoder. Adnan Menderes Üniversitesi bilgisayar programcılığın'dan mezun oldum,
+                        DGS ile Anadolu üniversitesi yönetim bilişim sistemlerine dikey geçiş yaptım 4. sınıfım.
+                        Bundan önce üniversite döneminde Cevizsoft'da stajım ve T-HOS yazılım firmasında 5 ay full stack developer olarak
+                        çalıştım.
+                        Bu hem kurumsal hayatı tanımam hem de farklı yazılım dilleriyle çalışmam açısından oldukça faydalı oldu.
+                        Proje deneyimimi arttırmamı sağlayarak iyi bir yazılımcı olma yolunda beni destekledi. Kendimi geliştiyorum ve
+                        araştırmalarıma devam ediyorum.
+
+
+                    </h4>*@
+
+                            <h4>@item.Details1</h4>
+
+                        }
+                        <a href="#" class="btn btn-primary read-m"> Daha Fazla Oku </a>
+                    </div>
+
+                </div>
+                <!--//left-->
+                <!--right-->
+                <aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
+                    <div class="right-blog-info text-left">
+
+                        @await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml")
+
+
+                        @await Html.PartialAsync("~/Views/About/SocialMediaAbout.cshtml")
+
+                        <div class="tech-btm">
+                            <h4>Son  Postlar</h4>
+
+                            @await Component.InvokeAsync("WriterLastBlog")
+
+                        </div>
+                    </div>
+
+                </aside>
+                <!--//right-->
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

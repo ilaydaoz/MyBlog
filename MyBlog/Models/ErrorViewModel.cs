@@ -1,6 +1,6 @@
 using System;
 
-namespace MyBlog.Models
+namespace CoreDemo.Models
 {
     public class ErrorViewModel
     {
