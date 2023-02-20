@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreLayer", "CoreLayer\CoreLayer.csproj", "{A50EA2B2-03CF-482C-954D-8DCEAB2BF352}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogApiDemo", "BlogApiDemo\BlogApiDemo.csproj", "{DE4F4E24-0244-4B85-847E-50196BEFA042}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jwt_core_proje", "jwt_core_proje\jwt_core_proje.csproj", "{B0715367-8ED2-4B4C-B22F-ABBA7C7670CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{A50EA2B2-03CF-482C-954D-8DCEAB2BF352}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A50EA2B2-03CF-482C-954D-8DCEAB2BF352}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A50EA2B2-03CF-482C-954D-8DCEAB2BF352}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE4F4E24-0244-4B85-847E-50196BEFA042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE4F4E24-0244-4B85-847E-50196BEFA042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE4F4E24-0244-4B85-847E-50196BEFA042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE4F4E24-0244-4B85-847E-50196BEFA042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0715367-8ED2-4B4C-B22F-ABBA7C7670CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0715367-8ED2-4B4C-B22F-ABBA7C7670CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0715367-8ED2-4B4C-B22F-ABBA7C7670CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0715367-8ED2-4B4C-B22F-ABBA7C7670CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

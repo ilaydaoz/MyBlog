@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Category
+   public class Category
     {
+        // özellik property
+
         [Key]
-        public int CategoryID { get; set; }
-        public string CategoryName { get; set; }
-        public string CategoryDescription { get; set; }
-        public bool CategoryStatus { get; set; }
+        public int CategoryId { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public bool Status { get; set; }
 
-        public List<Blog>  Blogs { get; set; }
-
+        public List<Blog> Blogs { get; set; }
 
     }
 }

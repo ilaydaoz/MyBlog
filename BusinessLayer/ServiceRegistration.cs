@@ -13,7 +13,8 @@ namespace BusinessLayer
     {
         public static void BusinessRegister(this IServiceCollection services)
         {
-            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<ICategoryService, CategoryManager>();
+            services.AddScoped<IAboutService, AboutManager>();
         }
     }
 }

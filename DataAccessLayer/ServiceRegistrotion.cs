@@ -1,6 +1,4 @@
-﻿using DataAccessLayer.Abstract;
-using DataAccessLayer.Concrete;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 
 namespace DataAccessLayer
 {
@@ -8,7 +6,8 @@ namespace DataAccessLayer
     {
         public static void DataAccessLayerRegister(this IServiceCollection services)
         {
-            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            //services.AddScoped<ICategoryDal, CategoryRepository>();
+            //services.AddScoped<IBlogRepository, BlogRepository>();
         }
     }
 }

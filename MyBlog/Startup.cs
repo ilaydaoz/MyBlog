@@ -23,7 +23,7 @@ namespace MyBlog
             //Transient - Scoped - Singelton
             services.BusinessRegister();
             services.DataAccessLayerRegister();
-
+          
             services.AddControllersWithViews();
         }
 
