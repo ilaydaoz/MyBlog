@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.EntityFramework
 {
-    //Yarım kalan sigaram...
+    
     public class EfMessage2Repository : GenericRepository<Message2>, IMessage2Dal
     {
         public List<Message2> GetInboxWithMessageByWriter(int id)

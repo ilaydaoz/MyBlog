@@ -9,12 +9,25 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Concrete
 {
-    public class Context : IdentityDbContext<AppUser, AppRole, int>
+    public class Context :IdentityDbContext<AppUser, AppRole, int>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-AKOHCIC;database=MyBlog; integrated security=true;");
+            if (!optionsBuilder.IsConfigured)
+            {
+                var connStr = "Server = postgres;User ID=postgres; Password = 12345; Host = localhost; Port = 5432; Database = MyBlog";
+                optionsBuilder.UseNpgsql(connStr, opt =>
+                {
+                    opt.EnableRetryOnFailure();
+                });
+            }
         }
+        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+
+            optionsBuilder.UseSqlServer("User ID=postgres;Password=12345;Server=localhost;Port=5432;Database=MyBlog;");
+            "BlazorSozlukDbConnectionString": "Server = postgres;User ID=postgres; Password = 12345; Host = localhost; Port = 5432; Database = Blazorsozluk",
+        }*/
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Message2>()

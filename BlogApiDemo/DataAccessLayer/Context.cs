@@ -10,7 +10,8 @@ namespace BlogApiDemo.DataAccessLayer
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server =(localdb)\\MSSQLLocalDB; database=CoreBlogApiDb; integrated security=true;");
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
         }
 
         public DbSet<Employee> Employees { get; set; }
